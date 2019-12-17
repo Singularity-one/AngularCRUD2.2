@@ -1,0 +1,24 @@
+<h2>Customer Details</h2> 
+
+<hr/>
+<div *ngFor="let customers of customers">
+  <div>
+    <label><b>ID: </b></label>{{customers.customerId}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{customers.name}}
+  </div>
+  <div>
+    <label><b>ADDR: </b></label> {{customers.addr}}
+  </div>
+  <div>
+    <label><b>AGE: </b></label> {{customers.age}}
+  </div>
+  <div>
+    <label><b>TEL: </b></label> {{customers.tel}}
+  </div>    
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Customer List</button><br>

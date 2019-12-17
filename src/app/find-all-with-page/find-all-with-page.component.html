@@ -1,0 +1,56 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Customer List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>customerId</th>
+          <th>name</th>
+          <th>addr</th>
+          <th>age</th>
+          <th>tel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customers of customers ; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{customers.customerId}}</td>
+          <td>{{customers.name}}</td>
+          <td>{{customers.addr}}</td>
+          <td>{{customers.age}}</td>
+          <td>{{customers.tel}}</td>
+        </tr>
+      </tbody>
+    </table>
+{{x}}
+    <!--實驗父傳子-->
+    <!-- <app-page [fTitle]="title"></app-page> -->
+     <!--實驗子上父-->
+    <!-- <app-page (addEvent)="add($event)"></app-page>
+    {{totalValue}}
+    <app-page [page]="page" [size]="size" [totalPages]="totalPages"></app-page> -->
+
+    <div class="from-inline float-left mr-1">
+      <select class="from-control" [value]="productsPerPage"
+        (change)="changePageSize($event.target.value)">
+      <option value="3">3 per Page</option>
+      <option value="4">4 per Page</option>
+      <option value="6">6 per Page</option>
+      <option value="8">8 per Page</option>
+      </select>
+    </div>
+
+    <div class="btn-group float-right">
+      <button *ngFor="let page of pageNumbers" (click)="changePage(page)" class="btn btn-outline-primary"
+       [class.active]="page==selectedPage">
+       {{page}}
+    </button>
+    </div>
+
+
+
+  </div>
+</div>

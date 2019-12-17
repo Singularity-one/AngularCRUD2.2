@@ -1,0 +1,101 @@
+body{
+    font-family: Microsoft JhengHei;
+}
+.top{
+    padding-top: 7.5%;
+    color:#fff;
+}
+.info{
+    padding-top: 20px;
+    letter-spacing: 4px;
+}
+.content{
+    margin-top: 5%;
+    height: 900px;
+    padding:80px;
+    background-color: #fff;
+}
+.right{
+    margin-left:160px;
+}
+#guide_pic{
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    border-color: #fff;
+    border: 3px solid;
+}
+.list-group-item{
+    color:#666;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+.title-2{
+    line-height: 45px;
+    font-family:monospace;
+    font-size:18px;
+    letter-spacing: 2px;
+    font-weight:bold;
+    color:dimgray;
+    border-bottom: 1px solid #aaa;
+}
+.title{
+    font-family:monospace;
+    font-size:23px;
+    letter-spacing: 2px;
+    font-weight:bold;
+    color:#666;
+}
+.lang{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+}
+.outer{
+    position: relative;
+    z-index: 10;
+    background-size:cover;
+    background-color: #333;
+}
+#cover{
+    position: fixed;
+    width: 100%;
+    height:auto;
+    z-index: -10;
+    filter: brightness(0.5);
+}
+a {
+       text-decoration: none !important;
+}
+
+#box12{
+     position: absolute;
+     left:  80%;      /* 離左邊距離*/
+    top:   -40%;     /* 位置高度 */
+     text-align: center;
+     font-size: 15px;
+     padding: 10px;
+     border: 1px solid 	#000000;  /*邊框顏色 */
+     background-color: white;
+    box-shadow: 1px 1px 5px #333333;
+    width: 400px;      /* 照片大小 */
+     transform: rotate(15deg);  /* 旋轉角度 */
+     border-style:solud;  
+     padding-bottom:50px;  /* 下內邊距 */
+   }
+   
+   #box22{
+     position: absolute;
+     left:  -40%;      /* 離左邊距離*/
+    top:   60%;     /* 位置高度 */
+     text-align: center;
+     font-size: 15px;
+     padding: 10px;
+     border: 1px solid 	#000000;  /*邊框顏色 */
+     background-color: white;
+    box-shadow: 1px 1px 5px #333333;
+    width: 400px;      /* 照片大小 */
+     transform: rotate(-15deg);  /* 旋轉角度 */
+     border-style:solud;  
+     padding-bottom:50px;  /* 下內邊距 */
+   }

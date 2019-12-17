@@ -1,0 +1,50 @@
+<p>
+  updata works!
+</p>
+<h3>Update Customer</h3>
+<div style="width: 400px;">
+  <div *ngFor="let customers of customers">
+
+  <form (ngSubmit)="onSubmit(nameForm)" #nameForm="ngForm" >
+    <div class="form-group">
+      <label for="name">CustomerId</label>
+      <input type="text" class="form-control"  #customerIdInput name="customerId" required [(ngModel)]="customerId" placeholder={{customers.customerId}}>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control"  #nameInput name="name" required [(ngModel)]="name" placeholder={{customers.name}}>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Addr</label>
+      <input type="text" class="form-control"  #addrInput name="addr" required [(ngModel)]="addr" placeholder={{customers.addr}}>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age</label>
+      <input type="text" class="form-control"  #ageInput name="age" required [(ngModel)]="age" placeholder={{customers.age}}>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Tel</label>
+      <input type="text" class="form-control"  #telInput name="tel" required [(ngModel)]="tel" placeholder={{customers.tel}}>
+    </div>
+    {{nameForm.value | json}}
+    <button type="submit" class="btn btn-success">送出</button>
+  </form>
+
+</div>
+</div>
+
+<!-- <tr *ngFor="let customers of customers ; index as i">
+  <td>{{ i + 1 }}</td>
+  <td>{{customers.customerId}}</td>
+  <td>{{customers.name}}</td>
+  <td>{{customers.addr}}</td>
+  <td>{{customers.age}}</td>
+  <td>{{customers.tel}}</td>
+</tr> 看有無抓到值-->
+<!-- <div *ngFor="let customers of customers">
+  <div>{{customers.customerId}}</div>
+</div> 看有無抓到值-->

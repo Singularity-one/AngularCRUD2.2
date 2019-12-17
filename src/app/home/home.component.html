@@ -1,0 +1,19 @@
+<ul>
+    <li><a [routerLink]="'/home'">Home</a></li>
+    <li><a [routerLink]="'/login'">Login</a></li>
+    <!-- <li><a [routerLink]="'/find-all'">findAll</a></li> -->
+    <li><a (click)="findAll()">findAll</a></li>
+    <li><a [routerLink]="'/createcustomer'">CreateCustomer</a></li>
+    <li><a [routerLink]="'/updata'">Updata</a></li>
+    <li><a [routerLink]="'/customer-details'">Customer-details</a></li>
+    <li><a [routerLink]="'/find-all-with-page'">findAllWithPage</a></li>
+    <li><a [routerLink]="'/find-all-with-age'">findAllWithAge</a></li>
+    <li><a [routerLink]="'/angular-updata'">angularUpdata</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<!-- 點擊後秀出全部 -->
+<div *ngIf="show"> 
+    <app-find-all></app-find-all>
+</div>

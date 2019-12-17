@@ -1,0 +1,58 @@
+<!-- <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>customerId</th>
+        <th>name</th>
+        <th>addr</th>
+        <th>age</th>
+        <th>tel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customers of customers ; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{customers.customerId}}</td>
+        <td>{{customers.name}}</td>
+        <td>{{customers.addr}}</td>
+        <td>{{customers.age}}</td>
+        <td>{{customers.tel}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Customer List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>customerId</th>
+            <th>name</th>
+            <th>addr</th>
+            <th>age</th>
+            <th>tel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customers of customers ; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{customers.customerId}}</td>
+            <td>{{customers.name}}</td>
+            <td>{{customers.addr}}</td>
+            <td>{{customers.age}}</td>
+            <td>{{customers.tel}}</td>
+            <td><button (click)="deleteCustomer(customers.customerId)" class="btn btn-danger">Delete</button>
+              <button (click)="updateCustomer(customers.customerId)" class="btn btn-info" style="margin-left: 10px" >Update</button>
+              <button (click)="customerDetails(customers.customerId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+{{x}}
+      <!-- <app-updata [param]="param"></app-updata> 實驗父傳子-->
+    </div>
+  </div>

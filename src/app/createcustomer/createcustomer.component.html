@@ -1,0 +1,29 @@
+<p>
+  createcustomer works!
+</p>
+<h3>Create Customer</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit(nameForm)" #nameForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name(WILLIE)</label>
+      <input type="text" class="form-control"  #nameInput name="name" required [(ngModel)]="name" placeholder="輸入name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Addr(地球)</label>
+      <input type="text" class="form-control"  #addrInput name="addr" required [(ngModel)]="addr" placeholder="輸入addr">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age(40)</label>
+      <input type="text" class="form-control"  #ageInput name="age" required [(ngModel)]="age" placeholder="輸入age">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Tel(XXXX)</label>
+      <input type="text" class="form-control"  #telInput name="tel" required [(ngModel)]="tel" placeholder="輸入tel">
+    </div>
+    {{nameForm.value | json}}
+    <button type="submit" class="btn btn-success">送出</button>
+  </form>
+</div>
